@@ -1,0 +1,82 @@
+@default:#e3eaef;
+@success:#0acf97;
+@primary:#2d7bf4;
+@warning:#f9bc0b;
+@info:#4eb7eb;
+@danger:#f1556c;
+@white:#FFFFFF;
+@border:#d9e3e9;
+@text:#333;
+.x-menu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  &.transition{
+    transition: height .4s ease;
+  }
+
+  &>.x-menu-item:hover{
+    background-color: fade(@primary,10%);
+    transition: background-color .4s ease;
+  }
+
+  &>.x-menu-item{
+    cursor: pointer;
+    display: block;
+    padding: 12px 20px;
+    color: #313a46;
+    font-size: 14px;
+
+    &>i[class*=re-icon-]{
+      margin-right: 5px;
+    }
+
+    &.active{
+      color: @primary;
+      transition: color .4s ease;
+    }
+
+    & .x-menu-item{
+      padding: 8px 20px 8px 43px;
+      font-size: 14px;
+    }
+
+    &.x-menu-group {
+     padding: 0;
+    }
+  }
+
+  .x-submenu {
+    color: #313a46;
+
+    &>.x-menu-title{
+      cursor: pointer;
+      padding: 12px 20px;
+      position: relative;
+
+      &:hover{
+        background-color: fade(@primary,10%);
+        transition: background-color .4s ease;
+      }
+      &>i[class*=re-icon-]{
+        margin-right: 5px;
+      }
+    }
+
+
+  }
+
+  .x-menu-group{
+    .x-menu-item;
+
+    .x-menu-title{
+      font-size: 12px;
+      position: relative;
+      cursor: auto;
+      color: #ccc;
+      padding: 8px 20px 8px 43px;
+    }
+  }
+}
